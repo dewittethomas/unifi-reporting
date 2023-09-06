@@ -132,5 +132,5 @@ Catch {
     $data = @($data) + $newrow
     $data | Export-Csv -Path $apistatuscsv -NoTypeInformation
     $data = $null
-    Write-Host $_.Exception.Message
+    throw $_.Exception.Message
 }
